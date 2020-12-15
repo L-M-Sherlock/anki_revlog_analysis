@@ -14,7 +14,7 @@ Anki 的数据库用的是 SQLite，推荐使用 DB Browser for SQLite 来查看
 
 1. 打开 DB Browser，文件 > 打开数据库
 
-![image-20201215212401770](Anki%20revlog%20%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90.assets/image-20201215212401770.png)
+![image-20201215212401770](README.assets/image-20201215212401770.png)
 
 2. 找到你 Anki 本地数据库的位置，通常这个位置是 `C:\Users\你电脑的用户名\AppData\Roaming\Anki2\你 Anki 本地配置的名称\`
 
@@ -22,7 +22,7 @@ Anki 的数据库用的是 SQLite，推荐使用 DB Browser for SQLite 来查看
 
 改好后如果你找到的位置是对的，那么就能看到 `collection.anki2` 的文件了
 
-![image-20201215212530874](Anki%20revlog%20%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90.assets/image-20201215212530874.png)
+![image-20201215212530874](README.assets/image-20201215212530874.png)
 
 3. 提取数据
 
@@ -37,18 +37,49 @@ WHERE type != 2
 
 然后点
 
-![image-20201215213157758](Anki%20revlog%20%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90.assets/image-20201215213157758.png)
+![image-20201215213157758](README.assets/image-20201215213157758.png)
 
 就能得到以下结果
 
-![image-20201215212944362](Anki%20revlog%20%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90.assets/image-20201215212944362.png)
+![image-20201215212944362](README.assets/image-20201215212944362.png)
 
 再点击
 
-![image-20201215213226185](Anki%20revlog%20%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90.assets/image-20201215213226185.png)
+![image-20201215213226185](README.assets/image-20201215213226185.png)
 
 就能将数据导出成 csv 格式，用 excel 打开就能看到这样的数据：
 
-![image-20201215213406428](Anki%20revlog%20%E6%95%B0%E6%8D%AE%E6%B8%85%E7%90%86%E4%B8%8E%E5%88%86%E6%9E%90.assets/image-20201215213406428.png)
+![image-20201215213406428](README.assets/image-20201215213406428.png)
 
-里面没有敏感数据，大家可以安心分享。
+里面没有关于卡片内容的敏感数据，大家可以安心分享。欢迎将你的 .csv 文件发送到我的邮箱地址：jarrett.ye@outlook.com，或者在专栏读者群(869469893)分享，也可以发送你的网盘分享链接。
+
+作为回报，我会将以下分析数据反馈给你。（如果你有想要分析的其它指标，也可以跟我提，如果基于目前的数据可以分析，我也会反馈给你）
+
+## Anki 数据分析
+
+### 不同反馈对应的记录数量
+
+![image-20201215214224921](README.assets/image-20201215214224921.png)
+
+### 总体遗忘/保留情况
+
+![image-20201215214348872](README.assets/image-20201215214348872.png)
+
+### 不同间隔下的复习记录数量
+
+![image-20201215214422873](README.assets/image-20201215214422873.png)
+
+### 不同间隔区间对应的保留率
+
+![image-20201215214449327](README.assets/image-20201215214449327.png)
+
+### 不同复习次数对应的保留率
+
+![image-20201215214514623](README.assets/image-20201215214514623.png)
+
+### 不同累计遗忘次数对应的记录数量
+
+![image-20201215214619371](README.assets/image-20201215214619371.png)
+
+还有很多其它指标，都开源在我的 GitHub 仓库：
+
