@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from datetime import timedelta
 
 df = pd.read_csv('anki_revlog.csv')
@@ -37,12 +36,12 @@ def get_feature(x):
             break
         x.iloc[idx + 1, 6] = x.iloc[idx, 6] + 1
         x.iloc[idx + 1, 8] = x.iloc[idx, 8] + str(int(x.iloc[idx, 4])) + ","
-        if log.p == 1:
+        if log.feedback == 1:
             x.iloc[idx + 1, 7] = x.iloc[idx, 7] + "1"
         else:
             x.iloc[idx + 1, 7] = x.iloc[idx, 7] + "0"
     return x
 
 
-df = df.groupby('cid').apply(get_feature)
-df.to_csv('revlog_history.tsv', split="\t", index=False)
+df = df.groupby('cid', as_index=False).apply(get_feature)
+df.to_csv('revlog_history.tsv', sep="\t", index=False)
